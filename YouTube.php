@@ -47,7 +47,7 @@ class YouTube
 
 		if (isset($result->nextPageToken)) // als er een volgende pagina is
 		{
-			$items = array_merge($items, $this->query($result->nextPageToken)->items); // haal die ook op en stop hem bij de rest.
+			$items = array_merge($items, $this->query($result->nextPageToken)); // haal die ook op en stop hem bij de rest.
 		}
 
 		return $items;
